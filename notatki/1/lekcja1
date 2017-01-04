@@ -1,0 +1,71 @@
+Podstawowe komendy w konsoli:
+sudo apt-get update : to 'komenda', za pomocą której możemy uaktualnić system
+sudo apt-get install nazwa_pakietu : to komenta, za pomocą której instalujemy pakiet/program o danej nazwie
+teraz troszkę rozbijmy całe to polecenie w dużym uogólnieniu
+sudo : to 'komenda', która mówi nam, że następne polecenie ma zostać wykonane z prawami administratora na komputerze
+apt-get : to taki 'program', za pomocą którego możemy instalować/usuwać/uaktualniać programy z naszego systemu
+apt-get install/update/remove : nic innego jak uruchomieine programu apt-get z parametreminstall lub remove lub update lub jeszcze innym
+myślcie o tym jak o funkcji w matematyce, która w zależności od podanego argumentu robi co innego
+
+touch nazwa_pliku : tworzy pusty plik np. touch Hello.java
+cd nazwa_folderu : przechodzi do wskazanego folderu - cd to skrót od ChangeDirectory
+ls : pokazuje listę plików w obecnym folderze
+
+git init : tworzy repozytorium gita w obecnym folderze
+git add nazwa_pliku/folderu : dodaje dany plik do gita - gita dodaje nasze pliki do 'zapisu'
+git add . : dodaje wszystkie nowe lub zmodyfikowane pliki z obecnego folderu i jego podfolderów
+git status : wyświetla obecny status repozytorium - pokazuje jakie zmiany wprowadzono od ostantiego 'zapisu'/commita
+git commit -m 'opis' : 'zapisuje' zmiany wprowadzone przez nas w plikach w repozytorium
+
+javac nazwa_pliku.java : 'kompiluje' nasz plik źródłowy z kodem javy do wykonywalnej klasy
+java nazwa_pliku : uruchamia nasz program
+
+Java jest językiem zorientowanym obiektowo - wszystko traktujemy w niej jak obiekt.
+Klasa to nic innego, jak 'szablon' opisujący cokolwiek - np. człowieka.
+Mówi nam ona, że ma człowiek, jak gatunek, ma takie a takie właściwości, załóżmy wzrost, kolor oczu, skóry wagę itd.
+
+Obiekt zaś jest czymś utworzonym na podstawie klasy, czyli 'szablonu', ale zamiast uogólnieniem odnoszącym się do całego gatunku,
+obiekt mówi o konkretnym przedmiocie.
+
+Rozważmy przykład klasy Człowiek i obiektu Krzyś
+Klasa człowiek mówi nam tylko ogólnie, że jest sobie człowiek, ma on jakiś wzrost, jakąś wagę, kolor oczu, 
+czyli jakieś cechy/własności, które będziemy nazywać 'polami'.
+Potrafi zrobić to i to i to. Nie mówi jednak nic dokładnego i konkretnego.
+No bo jak zmierzyć ile wzrostu ma Człowiek, skoro nie wiemy o kim mowa? W zależności od człowieka wzrost się będzie różnił,
+nie możemy konkretnie powiedzieć ile każdy człowiek ma wzrostu.
+Możemy za to stwierdzić, że na pewno go ma.
+
+W obiekcie zaś mamy już natomiast konkretnie zdefiniowane wartości - w obiekcie Krzyś możemy jasno powiedzieć, 
+że ma on tyle i tyle wzrostu, taką a taką wagę, taki kolor oczu.
+Analogicznie - klasy to matryce, obiekty to banknoty itd.
+
+W OOP ( programowanie zorientowane obiektowo) znane nam już wcześniej funkcje nazywamy metodami, bo tak i już.
+
+Podczas naszych lekcji będziemy korzystać z platformy c9.
+Aby się na niej zalogować należy:
+utworzyć konto na edx.org
+przejść pod adres cs50.io
+wybrać logowanie z edx i się zalogować
+gotowe
+
+Oto kod źródłowy naszego 1 programu w Javie:
+public class Hello{
+    public static void main(String[] args){
+        System.out.println("HELLO WORLD!");
+    }
+}
+
+System.out.println("HELLO WORLD!"); - za pomocą tej 'komendy' możemy wyświetlić coś na ekranie
+public static void main(String[] args) - tutaj definiujemy 'główną' czy domyślną metodę/funkcję naszej klasy/naszego programu
+przy uruchomieniu komputer szuka jakiejś domyślnej funkcji, którą ma wykonać. Programiści akurat się tak umówili, że będzie
+się ona nazywała main() i tyle.
+to String[] args jako paramter tej funkcji umożliwi nam w przyszłości korzystanie z parametrów z konsoli. Co to oznacza?
+A no pozwoli to nam na robienie programów takich jak apt-get, które już przy wywołaniu z konsoli mogą przyjąć jakiś argument.
+Jaśniej w lekcji2 
+
+void oznacza tylko tyle, że ta metoda/funkcja nic nie zwraca.
+public - jest to metoda publiczna, dostępna zewszą w kodzie
+static - nie możemy jej zmieniać później - raz zdefiniowana musi już pozostać, więc gdyby nam przyszło do głowy, żeby
+później w kodzie ponownie tą motodę definiować, no to niestety nie możemy
+
+Praca domowa na dziś: utworzyć konto na githubie
